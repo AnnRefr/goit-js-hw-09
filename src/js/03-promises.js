@@ -21,11 +21,9 @@ function handlerSubmit(e) {
     createPromise(i, firstDelay)
     .then(({ position, delay }) => {
       Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
-      console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
     })
     .catch(({ position, delay }) => {
       Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-      console.log(`❌ Rejected promise ${position} in ${delay}ms`);
     });
 firstDelay += stepDelay;
   };
